@@ -14,7 +14,7 @@ import {
   MoreThanOrEqual,
 } from "typeorm"
 import { FindOptionsOrder } from "typeorm/find-options/FindOptionsOrder"
-import { isObject } from "./is-object"
+import { isObject } from "@medusajs/utils"
 
 /**
  * Used to build TypeORM queries.
@@ -122,17 +122,13 @@ function buildWhere<TWhereKeys extends object, TEntity>(
             break
           default:
             if (objectValue != undefined && typeof objectValue === "object") {
-              where[key] = buildWhere<any, TEntity>(objectValue)
+              where[key].push(buildWhere<any, TEntity>(objectValue))
               return
             }
-            where[key] = value
+            where[key].push(value)
         }
         return
       })
-
-      if (!Array.isArray(where[key])) {
-        continue
-      }
 
       if (where[key].length === 1) {
         where[key] = where[key][0]
