@@ -3,10 +3,9 @@ import {
   FilterableInventoryItemProps,
   FindConfig,
 } from "@medusajs/types"
-import { objectToStringPath } from "@medusajs/utils"
 import { EntityManager, FindOptionsWhere, ILike } from "typeorm"
 import { InventoryItem } from "../models"
-import { buildQuery } from "./build-query"
+import { buildQuery, objectToStringPath } from "./build-query"
 
 export function getListQuery(
   manager: EntityManager,
