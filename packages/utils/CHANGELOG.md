@@ -1,5 +1,13 @@
 # @medusajs/utils
 
+## 1.8.6
+
+### Patch Changes
+
+- [#4026](https://github.com/medusajs/medusa/pull/4026) [`a91987fab`](https://github.com/medusajs/medusa/commit/a91987fab33745f9864eab21bd1c27e8e3e24571) Thanks [@olivermrbl](https://github.com/olivermrbl)! - feat(medusa): Remove sqlite support
+
+- [#4148](https://github.com/medusajs/medusa/pull/4148) [`c0e527d6e`](https://github.com/medusajs/medusa/commit/c0e527d6e0a67d0c53577a0b9c3d16ee8dc5740f) Thanks [@adrien2p](https://github.com/adrien2p)! - chore(medusa): Align build query utils
+
 ## 1.8.5
 
 ### Patch Changes
